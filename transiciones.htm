@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transiciones</title>
+    <script src="transiciones.js" defer></script>
+    <style>
+        div {
+            background-color: darkolivegreen;
+            color: white;
+            padding: 1rem;
+            width: 50%;
+            margin: 2rem;
+            transition-property: background-color, font-size;
+            transition-duration: 1s;
+        }
+
+        div:hover {
+            background-color: hotpink;
+            font-size: 2rem;
+        }
+
+        p {
+            background-color: rgb(204, 160, 48);
+            color: white;
+            padding: 1rem;
+            width: 50%;
+            margin: 2rem;
+            transition-property: transform; /* Propiedad a animar */
+            transition-duration: 1s; /* Duración de la animación */
+            transition-timing-function: ease-out; /* forma de acelerar la transición */
+            transition-delay: 2s; /* Retraso de comienzo */
+        }
+
+        p:hover {
+            transform: scale(1.5) translateY(200px);
+        }
+        input {
+            transition-property: background-color; 
+            transition-duration: 1s; 
+        }
+        input:invalid {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora in nobis inventore sequi ut facilis alias animi error veritatis laboriosam, molestias saepe adipisci incidunt totam ad tempore repellendus aliquid eligendi!</div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla facere veniam excepturi! Commodi ratione at quasi eligendi sunt odio ipsam enim quibusdam ex repellat maxime, laudantium numquam veniam saepe reprehenderit!</p>
+    <input type="text" pattern="\d{3}">
+
+</body>
+</html>

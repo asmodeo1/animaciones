@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <script src="animaciones.js" defer></script>
+    <style>
+        div {
+            background-color: darkolivegreen;
+            color: white;
+            padding: 1rem;
+            width: 50%;
+            margin: 2rem;
+        }
+        div:hover{
+            animation-name: movimiento;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            animation-delay: .5s;
+        }
+
+        #par1 {
+            background-color: rgb(204, 160, 48);
+            color: white;
+            padding: 1rem;
+            width: 50%;
+            margin: 2rem;
+            animation: escalar 2s infinite alternate;
+        }
+
+        #par1:hover {
+            animation: moverP 2s ease-in;
+            position: relative; /* Para que funcione top, pues por defecto los elementos
+                        estáticos no se peude mover con top, left, .... */
+            top: 0; /* Para poder moverlo debe tener top algún valor inicial */
+        }
+
+        #par2 {
+            background-color: rgb(131, 243, 155);
+            color: rgb(9, 8, 8);
+            padding: 1rem;
+            width: 50%;
+            margin: 2rem;
+        }
+
+
+        @keyframes moverP {
+            50% {
+                top: -100px;
+            }
+            to {
+                top: 200px;
+            }
+        }
+
+        @keyframes movimiento {
+            25% {
+                background-color: deepskyblue;
+            }
+            50% {
+                background-color: darkcyan;
+                color:darkgoldenrod;
+            }
+            100% {
+               margin: 3rem;
+            }
+        }
+        @keyframes escalar {
+            100% {
+                transform: scale(1.2);
+                color: rgb(69, 12, 126);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto alias debitis amet, animi aperiam aliquid. Unde quasi quis ut obcaecati porro ex explicabo illum error asperiores? Debitis adipisci dolorem illo!</div>
+    <p id="par1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto alias debitis amet, animi aperiam aliquid. Unde quasi quis ut obcaecati porro ex explicabo illum error asperiores? Debitis adipisci dolorem illo!</p>
+    <p id="par2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto alias debitis amet, animi aperiam aliquid. Unde quasi quis ut obcaecati porro ex explicabo illum error asperiores? Debitis adipisci dolorem illo!</p>
+    
+</body>
+</html>

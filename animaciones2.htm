@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <script src="animaciones2.js" defer></script>
+    <style>
+        div {
+            background-color: darkolivegreen;
+            color: white;
+            padding: 1rem;
+            width: 50%;
+            margin: 2rem;
+            position: relative;
+            left: 0;
+            /*animation: movimiento 4s infinite alternate;*/
+        }
+        @keyframes movimiento {
+            25% {
+                left: 25%;
+            }
+            50% {
+                left: 50%;
+            }
+            100% {
+               left: 100%;
+            }
+        }
+
+        input[type="button"] {
+            padding: 1rem;
+            background-color: dodgerblue;
+            color:white;
+            font-weight: bold;
+        }
+      
+    </style>
+</head>
+<body>
+    <div id="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto alias debitis amet, animi aperiam aliquid. Unde quasi quis ut obcaecati porro ex explicabo illum error asperiores? Debitis adipisci dolorem illo!</div>
+    <input type="button" value="iniciar" id="iniciar">
+    <input type="button" value="parar" id="parar">
+</body>
+</html>
