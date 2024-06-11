@@ -9,11 +9,16 @@
             background-color: darkseagreen;
             padding: 2rem;
             width: 25%;
-            transition-property: background-color;
-            transition-duration: 2s;
         }
         div:hover {
-            background-color: brown;
+            animation: cambiarColor 2s;
+           /* animation-name: cambiarColor;
+            animation-duration: 2s;*/
+        }
+        @keyframes cambiarColor {
+            100% {
+                background-color: blueviolet;
+            }
         }
     </style>
 </head>
