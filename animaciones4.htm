@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <style>
+         #caja1 {
+            background-color: darkolivegreen;
+            color: white;
+            padding: 1rem;
+            width: 100px;
+            height: 100px;
+            margin: 2rem;
+            display: table-cell;
+            vertical-align: middle;
+            animation: transformacion 1s infinite alternate;
+            
+            transition-property: left;
+            transition-duration: 2s;
+            position: relative;
+            left: 0;
+        }
+        #caja1:hover {
+            left: 50vw;
+        }
+        @keyframes transformacion {
+            0% {
+                clip-path: circle(75%);
+            }
+            100% {
+                clip-path: circle(25%);
+                transform: rotateY(200deg);
+                transform: rotateX(200deg);
+
+            }
+        }
+
+        #caja2 {
+            position: relative;
+        }
+        #caja2 img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #caja2 img:first-of-type {
+            opacity: 0;
+            animation: mostrar 2s alternate infinite;
+
+        }
+        #caja2 img:nth-of-type(2) {
+            animation: ocultar 2s alternate infinite;
+            opacity: 1;
+        }
+
+        @keyframes ocultar {
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes mostrar {
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 3rem;
+        }
+        h1 span {
+            top: 0;
+            position: relative;
+        }
+
+
+        h1 span:first-of-type {
+            animation: destacar 1s;
+        }
+        h1 span:nth-of-type(2) {
+            animation: destacar 1s 1s;
+        }
+        h1 span:nth-of-type(3) {
+            animation: destacar 1s 2s;
+        }
+        h1 span:nth-of-type(4) {
+            animation: destacar 1s 3s;
+        }
+
+        @keyframes destacar {
+            100% {
+                color: red;
+                top: 10px;
+            }
+            
+        }
+         
+
+    </style>
+</head>
+<body>
+    <h1><span>H</span><span>O</span><span>L</span><span>A</span></h1>
+    <h1 id="molesto">¿Molesto?</h1>
+
+    <div id="caja1">
+        Lorem ipsum
+    </div>
+    <div id="caja2">
+        <img src="coke.png" alt="refresco">
+        <img src="fries.png" alt="patatas">
+    </div>
+
+    <script>
+        function cambiar() {
+            const h1 = document.getElementById("molesto");
+            if(h1.style.opacity == 0) {
+                h1.style.opacity = 1;
+            } else {
+                h1.style.opacity = 0;
+            }
+        }
+        setInterval(cambiar, 200);
+    </script>
+</body>
+</html>
