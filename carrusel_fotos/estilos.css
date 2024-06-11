@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+}
+#fotos {
+    width: 50%;
+    margin: auto;
+    border: solid rgb(224, 34, 9);
+}
+#fotos img {
+    width: 100%;
+    /* Ya que no todas las fotos tienen la misma altura */
+    max-height: 360px;
+    display: block;
+}
+.mostrarFoto{
+    animation: mostrarFoto 2s;
+}
+.mostrarLeyenda{
+    animation: mostrarLeyenda 2s;
+}
+#leyenda {
+    margin: 0;
+    text-align: end;
+    padding: 5px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(224, 34, 9);
+    color: white;
+}
+/* Debemso crear dos animaciones diferentes pue sno queremos aplicar el clip-path a la leyenda */
+@keyframes mostrarFoto {
+    0% {
+        opacity: 0;
+        clip-path:inset(100% 100% 100% 100%); 
+    }
+    100% {
+        opacity: 1;
+        clip-path:inset(0 0 0 0); ;
+    }
+}
+@keyframes mostrarLeyenda {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
