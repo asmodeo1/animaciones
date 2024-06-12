@@ -14,9 +14,22 @@
             margin: 3rem auto;
             width: fit-content;
             font-size: 2rem;
+            animation: animacion 2s alternate infinite;
         }
-        .agrandar {
-            font-size: 3rem;
+        
+        @keyframes animacion {
+            40% {
+                transform: translateX(50px);
+            }
+            60% {
+                /* Ponemos el primer 50px para que siga en esa posicion */
+                transform: translate(50px, 50px);
+                color: black;
+            }
+            100% {
+                transform: translate(50px, 50px); /* Si queremos que se mantenga en esos 50px */
+                color:brown;
+            }
         }
     </style>
 </head>

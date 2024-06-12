@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio9</title>
+    <script src="ejercicio9.js" defer></script>
     <style>
  
         div {
@@ -16,6 +17,19 @@
         input {
             display: block;
             margin: auto;
+        }
+
+        @keyframes animacion {
+            25% {
+                border-color: red;
+            }
+            50% {
+                border-width: 10px;
+            }
+            75% {
+                border-color: blue;
+                border-width: 10px; /* Si quiero que se mantenga en 10px */
+            }
         }
      
     </style>
